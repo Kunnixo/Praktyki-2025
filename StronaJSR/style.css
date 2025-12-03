@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #232335;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #232335;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 30px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+ul li a:hover {
+    background-color: #000000;
+}
+
+.navlogo img {
+    height: 30px;
+}
+
+.tlo { background-image: url(IU0A0376.png); }
+.tlo1 { background-image: url(tlorajdy.png); }
+.tlo2 { background-image: url(tlosim.png); }
+
+.tlo, .tlo1, .tlo2, .tlo3 {
+    display: flex;
+    height: 870px;
+    background-color: #232335;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-na-tle {
+    text-align: center;
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    color: rgb(0, 140, 255);
+    text-shadow: 2px 2px 30px #004883;
+    transition: transform 0.3s ease;
+    padding: 0 10px;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.text-na-tle:hover {
+    transform: scale(1.1);
+}
+
+.naglowek-artykul {
+    text-align: center;
+    text-decoration: none;
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 70px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.text-artykul {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-decoration: none;
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #151520;
+    line-height: 1.5;
+}
+
+main {
+    flex-grow: 1;
+    background-color: #232335;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.artykulformat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.artykuly {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.artykul {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.artykul img {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+.slideshow {
+    margin-top: 50px;
+    width: 90%;
+    height: 400px;
+    max-width: 600px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fade 21s infinite;
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 3.5s; }
+.slide:nth-child(3) { animation-delay: 7s; }
+.slide:nth-child(4) { animation-delay: 10.5s; }
+.slide:nth-child(5) { animation-delay: 14s; }
+.slide:nth-child(6) { animation-delay: 17.5s; }
+
+@keyframes fade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    20% { opacity: 1; }
+    30% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+footer {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 0 10px;
+}
+
+@media (max-width: 1000px) {
+    .artykuly {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .artykul {
+        margin-bottom: 40px;
+    }
+
+    .artykulformat {
+    flex-direction: column;
+}
+}
+
+@media (max-width: 768px) {
+    .text-na-tle {
+        font-size: 50px;
+        line-height: 1.1;
+    }
+
+    .naglowek-artykul {
+        font-size: 40px;
+    }
+
+    ul li a {
+        font-size: 20px;
+        padding: 15px 10px;
+    }
+
+    .slideshow {
+        width: 90%;
+        height: 250px;
+    }
+
+    .tlo, .tlo1, .tlo2, .tlo3 {
+        height: 600px;
+    }
+}
