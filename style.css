@@ -278,4 +278,8 @@ footer {
     .sponsor-logo img {
         max-width: 130px;
     }
+
+    .slideshow {
+    margin-top: 5px;
+}
 }
