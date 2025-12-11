@@ -60,7 +60,7 @@ ul li a:hover {
     font-weight: 400;
     font-style: normal;
     font-size: 100px;
-    color: rgb(0, 140, 255);
+    color: #008cff;
     text-shadow: 2px 2px 30px #004883;
     transition: transform 0.3s ease;
     padding: 0 10px;
@@ -108,6 +108,8 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 .artykulformat {
@@ -156,6 +158,36 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
+
+.sponsorzy {
+    background-color: #008cff;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.sponsorzy-logos {
+    display: flex;
+    gap: 50px;
+    padding: 20px;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sponsor-logo img {
+    max-width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.sponsor-logo img:hover {
+    transform: scale(1.1);
+}
+
 
 .slide {
     position: absolute;
@@ -228,10 +260,18 @@ footer {
 
     .slideshow {
         width: 90%;
-        height: 250px;
+        height: 300px;
     }
 
     .tlo, .tlo1, .tlo2, .tlo3 {
         height: 600px;
+    }
+
+    .sponsorzy-logos {
+        gap: 40px;
+    }
+
+    .sponsor-logo img {
+        max-width: 130px;
     }
 }
